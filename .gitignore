@@ -1,3 +1,9 @@
+
+
+# Log file
+*.log
+
+# https://github.com/github/gitignore/blob/master/Java.gitignore
 # Compiled class file
 *.class
 
@@ -19,5 +25,74 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+.gradle
+/build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+
+# Custom
+# IntelliJ
+out/
+
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+*/bin/
+bin/
+classes/
+target/
+
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+.Trashes
+
+### Gradle ###
+bin
+out
+.gradle
+build
+src/generated-sources
+
+README.html
+
+
