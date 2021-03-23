@@ -1,0 +1,369 @@
+{
+	"info": {
+		"_postman_id": "ced2639a-18c2-4752-b8ca-72fa608d0410",
+		"name": "OneTOManyH2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ONETOMANY H2 Copy",
+			"item": [
+				{
+					"name": "[H2 CREATE] userCreate Localhost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"job\":\"programador\",\n    \"name\":\"carmen\",\n    \"rut\":\"2348444-k\",\n    \"birthday\":\"04-09-2018\",\n    \"actor\":[\n        {\n            \"login\":\"logeo de testing\",\n            \"avatar\":\"el cachorro de la esquina\"\n        },\n        {\n            \"login\":\"logeo para testear\",\n            \"avatar\":\"la ventana d\"\n        }\n    ],\n    \"repo\":[\n        {\n            \"name\":\"el repositorio remoto\",\n            \"url\":\"wwww.repositorio.com\"\n        },\n        {\n            \"name\":\"prueba de otro\",\n            \"url\":\"www.verificando\"\n        }\n\n    ]\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8030/onetomany/api/save-event",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8030",
+							"path": [
+								"onetomany",
+								"api",
+								"save-event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[H2 HEALTH] userCreate Localhost ACTUATOR health",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n    \"job\":\"Holam undo\",\n    \"name\":\"hola mundo\",\n    \"rut\":\"23484748-k\",\n    \"birthday\":\"04-09-2018\",\n    \"datoextra\":\"datoextra\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8030/onetomany/health",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8030",
+							"path": [
+								"onetomany",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[H2 SEARCH] userCreate Localhost Find by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8030/onetomany/api/findbyid/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8030",
+							"path": [
+								"onetomany",
+								"api",
+								"findbyid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[H2 SEARCH] userCreate Localhost Find all Event's IDS",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n    \"job\":\"Holam undo\",\n    \"name\":\"hola mundo\",\n    \"rut\":\"23484748-k\",\n    \"birthday\":\"04-09-2018\",\n    \"datoextra\":\"datoextra\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8030/onetomany/api/findAllId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8030",
+							"path": [
+								"onetomany",
+								"api",
+								"findAllId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[H2 SEARCH] userCreate Localhost Find all Event's IDS Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n    \"job\":\"Holam undo\",\n    \"name\":\"hola mundo\",\n    \"rut\":\"23484748-k\",\n    \"birthday\":\"04-09-2018\",\n    \"datoextra\":\"datoextra\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8040/onetomany/api/findAllId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"onetomany",
+								"api",
+								"findAllId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[H2 SEARCH] userCreate Search Event by Repo ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8040/onetomany/api/events/repo/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"onetomany",
+								"api",
+								"events",
+								"repo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[H2 SEARCH] userCreate Search Event by actor  ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8030/onetomany/api/events/actor/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8030",
+							"path": [
+								"onetomany",
+								"api",
+								"events",
+								"actor",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[H2 SEARCH] userCreate Search Event by repoID and actorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8040/onetomany/api/events/repos/4/actors/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"onetomany",
+								"api",
+								"events",
+								"repos",
+								"4",
+								"actors",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[H2 SEARCH] userCreate Search All Events",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8040/onetomany/api/events",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"onetomany",
+								"api",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[H2 SEARCH] userCreate Testing",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8040/onetomany/api/testing",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"onetomany",
+								"api",
+								"testing"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[H2 DELETE] userCreate Localhost DeleteAll",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n    \"job\":\"Holam undo\",\n    \"name\":\"hola mundo\",\n    \"rut\":\"23484748-k\",\n    \"birthday\":\"04-09-2018\",\n    \"datoextra\":\"datoextra\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8040/manytomany/api/deleteAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"manytomany",
+								"api",
+								"deleteAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[H2 DELETE] userCreate Localhost DeletebyEventID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n    \"job\":\"Holam undo\",\n    \"name\":\"hola mundo\",\n    \"rut\":\"23484748-k\",\n    \"birthday\":\"04-09-2018\",\n    \"datoextra\":\"datoextra\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8030/onetomany/api/deleteByEventId/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8030",
+							"path": [
+								"onetomany",
+								"api",
+								"deleteByEventId",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[H2 DELETE] userCreate Localhost DeletebyEvent Name",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n    \"job\":\"Holam undo\",\n    \"name\":\"hola mundo\",\n    \"rut\":\"23484748-k\",\n    \"birthday\":\"04-09-2018\",\n    \"datoextra\":\"datoextra\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8030/onetomany/api/deleteByName/carmen",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8030",
+							"path": [
+								"onetomany",
+								"api",
+								"deleteByName",
+								"carmen"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
